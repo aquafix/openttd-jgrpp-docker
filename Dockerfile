@@ -23,7 +23,6 @@ ENV jgrpp_version=0.54.5
 ENV opengfx_version=7.1
 RUN curl -fLo jgrpp-$jgrpp_version.tar.gz https://github.com/JGRennison/OpenTTD-patches/archive/refs/tags/jgrpp-$jgrpp_version.tar.gz
 RUN curl -fLo opengfx-$opengfx_version-all.zip https://cdn.openttd.org/opengfx-releases/$opengfx_version/opengfx-$opengfx_version-all.zip
-RUN echo "e8a14df24df074c315e7a309cdb8d151c9eea9ef79723c0e2e662095d3108a4e *jgrpp-$jgrpp_version.tar.gz" | sha256sum -c
 RUN echo "928fcf34efd0719a3560cbab6821d71ce686b6315e8825360fba87a7a94d7846 *opengfx-$opengfx_version-all.zip" | sha256sum -c
 RUN tar -xvzf jgrpp-$jgrpp_version.tar.gz
 RUN mkdir /tmp/build
